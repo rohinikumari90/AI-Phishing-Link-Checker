@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Phishing URL Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🛡️ AI Phishing URL Detector</h1>
+        <p class="subtitle">Detect suspicious websites using Machine Learning</p>
+    </div>
+
+    <form method="POST" id="checkForm">
+        <input type="text" name="url" id="urlInput" placeholder="https://example.com" required value="{{ checked_url or '' }}">
+        <button type="submit" id="submitBtn">
+            <span id="btnText">Analyze URL</span>
+            <span id="btnLoader" class="loader" style="display:none;"></span>
+        </button>
+    </form>
+
+    {% if result %}
+    <div class="result-box
+        {% if 'PHISHING' in result %}result-danger
+        {% elif 'SUSPICIOUS' in result %}result-warning
+        {% else %}result-safe{% endif %}">
+
+        <div class="result-icon">
+            {% if 'PHISHING' in result %}🚨
+            {% elif 'SUSPICIOUS' in result %}⚠️
+            {% else %}✅{% endif %}
+        </div>
+
+        <h2>{{ result }}</h2>
+
+        {% if confidence %}
+        <div class="confidence-bar-wrapper">
+            <div class="confidence-bar" style="width: {{ confidence }}%;"></div>
+        </div>
+        <p class="confidence-text">Confidence : <strong>{{ confidence }}%</strong></p>
+        {% endif %}
+
+        {% if explanations %}
+        <div class="explanations">
+            <h3>Why this result?</h3>
+            <ul>
+                {% for item in explanations %}
+                <li class="exp-{{ item.type }}">
+                    <span class="exp-icon">{{ item.icon }}</span> {{ item.text }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="history-section">
+        <div class="history-header">
+            <h3>Recent Checks</h3>
+            <button id="clearHistory" type="button">Clear</button>
+        </div>
+        <ul id="historyList"></ul>
+    </div>
+
+</div>
+
+<script>
+    const form = document.getElementById('checkForm');
+    const btnText = document.getElementById('btnText');
+    const btnLoader = document.getElementById('btnLoader');
+
+    form.addEventListener('submit', function () {
+        btnText.style.display = 'none';
+        btnLoader.style.display = 'inline-block';
+
+        const url = document.getElementById('urlInput').value;
+        saveToHistory(url);
+    });
+
+    function saveToHistory(url) {
+        let history = JSON.parse(localStorage.getItem('phishing_check_history') || '[]');
+        history = history.filter(item => item !== url);
+        history.unshift(url);
+        history = history.slice(0, 8);
+        localStorage.setItem('phishing_check_history', JSON.stringify(history));
+    }
+
+    function renderHistory() {
+        const historyList = document.getElementById('historyList');
+        const history = JSON.parse(localStorage.getItem('phishing_check_history') || '[]');
+        historyList.innerHTML = '';
+
+        if (history.length === 0) {
+            historyList.innerHTML = '<li class="empty-history">No checks yet</li>';
+            return;
+        }
+
+        history.forEach(url => {
+            const li = document.createElement('li');
+            li.textContent = url;
+            li.addEventListener('click', () => {
+                document.getElementById('urlInput').value = url;
+            });
+            historyList.appendChild(li);
+        });
+    }
+
+    document.getElementById('clearHistory').addEventListener('click', () => {
+        localStorage.removeItem('phishing_check_history');
+        renderHistory();
+    });
+
+    renderHistory();
+</script>
+
+</body>
+</html>
