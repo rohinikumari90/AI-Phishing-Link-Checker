@@ -81,11 +81,19 @@ python app.py
 
 Open the local URL displayed by Flask in your web browser.
 
-🖥️ Application Screenshots
+## 🖥️ Application Screenshots
 
-Screenshots of the application are available in the Screenshots folder.
+### Application Interface
 
-![AI Phishing Link Checker](./Screenshots/phishing-detection.png)
+![Application Running](./Screenshots/application-running.png)
+
+### Phishing URL Detection
+
+![Phishing URL Detection](./Screenshots/phishing-detection.png)
+
+### Safe URL Detection
+
+![Safe URL Detection](./Screenshots/safe-url-detection.png)
 
 🔎 Example Workflow
 Enter a URL into the web application.
