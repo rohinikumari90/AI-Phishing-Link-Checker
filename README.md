@@ -11,6 +11,7 @@ Phishing attacks often use malicious URLs to trick users into visiting fake webs
 This project aims to provide a simple way to analyze a URL and identify suspicious characteristics using a Machine Learning-based approach.
 
 How it works
+
 User enters URL
        ↓
 URL Feature Extraction
@@ -23,6 +24,7 @@ Prediction + Confidence Score
 
 
 ✨ Features
+
 🔍 Detects potentially phishing and legitimate URLs
 🤖 Machine Learning-based URL classification
 🌲 Random Forest classification model
@@ -33,15 +35,18 @@ Prediction + Confidence Score
 
 
 🛠️ Tech Stack
+
 Programming & Frameworks
 Python
 Flask
 HTML
 CSS
+
 Machine Learning & Data Processing
 Scikit-learn
 Pandas
 NumPy
+
 Cybersecurity Concepts
 Phishing URL Detection
 Malicious URL Analysis
@@ -50,6 +55,7 @@ Web Security
 
 
 📂 Project Structure
+
 AI-Phishing-Link-Checker/
 │
 ├── Screenshots/
@@ -78,6 +84,7 @@ AI-Phishing-Link-Checker/
 └── README.md
 
 ⚙️ Installation & Setup
+
 1. Clone the repository
 git clone https://github.com/rohinikumari90/AI-Phishing-Link-Checker.git
 2. Navigate to the project directory
@@ -107,6 +114,7 @@ Open the local URL displayed by Flask in your web browser.
 
 
 🔎 Example Workflow
+
 Enter a URL into the web application.
 The application extracts relevant URL characteristics.
 The trained Random Forest model analyzes the extracted features.
@@ -115,6 +123,7 @@ A confidence score is provided along with the result.
 
 
 🎯 Project Objectives
+
 Understand how Machine Learning can be applied to cybersecurity.
 Analyze URL characteristics associated with phishing websites.
 Build a practical cybersecurity-focused web application.
