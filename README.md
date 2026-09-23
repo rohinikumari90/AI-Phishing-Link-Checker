@@ -56,6 +56,9 @@ Web Security
 
 📂 Project Structure
 
+## 📂 Project Structure
+
+```text
 AI-Phishing-Link-Checker/
 │
 ├── Screenshots/
@@ -82,7 +85,7 @@ AI-Phishing-Link-Checker/
 ├── .gitattributes
 ├── LICENSE
 └── README.md
-
+```
 ⚙️ Installation & Setup
 
 1. Clone the repository
