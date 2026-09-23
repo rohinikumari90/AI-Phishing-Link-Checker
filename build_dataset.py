@@ -1,12 +1,10 @@
 import pandas as pd
 from feature_extraction import extract_features
 
-# Load the sampled dataset
 df = pd.read_csv("Dataset/sample_urls_augmented.csv")
 
 print("Extracting features for", len(df), "URLs... this may take a moment")
 
-# Apply extract_features to every URL and build a new DataFrame
 feature_rows = df['url'].apply(extract_features)
 features_df = pd.DataFrame(list(feature_rows))
 
