@@ -1,17 +1,20 @@
-🔐 AI Phishing Link Checker
+# 🔐 AI Phishing Link Checker
 
-An AI-powered web application that analyzes URLs and predicts whether they are legitimate or potentially phishing using Machine Learning.
+An AI-powered web application that analyzes URLs and predicts whether they are **legitimate or potentially phishing** using Machine Learning.
 
-The application uses Python, Flask, and a Random Forest classifier to analyze lexical characteristics of URLs and provide a prediction along with a confidence score.
+The application uses **Python, Flask, and a Random Forest classifier** to analyze lexical characteristics of URLs and provide a prediction along with a confidence score.
 
-📌 Overview
+---
+
+## 📌 Overview
 
 Phishing attacks often use malicious URLs to trick users into visiting fake websites or sharing sensitive information.
 
-This project aims to provide a simple way to analyze a URL and identify suspicious characteristics using a Machine Learning-based approach.
+This project provides a simple way to analyze a URL and identify suspicious characteristics using a Machine Learning-based approach.
 
-How it works
+### How It Works
 
+```text
 User enters URL
        ↓
 URL Feature Extraction
@@ -21,40 +24,45 @@ Machine Learning Model
 Random Forest Classifier
        ↓
 Prediction + Confidence Score
+```
 
+---
 
-✨ Features
+## ✨ Features
 
-🔍 Detects potentially phishing and legitimate URLs
-🤖 Machine Learning-based URL classification
-🌲 Random Forest classification model
-📊 Provides prediction confidence
-🌐 Simple Flask-based web interface
-⚡ Fast URL analysis
-🧩 Modular feature extraction and model-training scripts
+- 🔍 Detects potentially phishing and legitimate URLs
+- 🤖 Machine Learning-based URL classification
+- 🌲 Random Forest classification model
+- 📊 Provides prediction confidence
+- 🌐 Flask-based web interface
+- ⚡ Fast URL analysis
+- 🧩 Modular feature extraction and model-training scripts
 
+---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Programming & Frameworks
-Python
-Flask
-HTML
-CSS
+### Programming & Frameworks
 
-Machine Learning & Data Processing
-Scikit-learn
-Pandas
-NumPy
+- Python
+- Flask
+- HTML
+- CSS
 
-Cybersecurity Concepts
-Phishing URL Detection
-Malicious URL Analysis
-URL Feature Extraction
-Web Security
+### Machine Learning & Data Processing
 
+- Scikit-learn
+- Pandas
+- NumPy
 
-📂 Project Structure
+### Cybersecurity Concepts
+
+- Phishing URL Detection
+- Malicious URL Analysis
+- URL Feature Extraction
+- Web Security
+
+---
 
 ## 📂 Project Structure
 
@@ -86,20 +94,40 @@ AI-Phishing-Link-Checker/
 ├── LICENSE
 └── README.md
 ```
-⚙️ Installation & Setup
 
-1. Clone the repository
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/rohinikumari90/AI-Phishing-Link-Checker.git
-2. Navigate to the project directory
+```
+
+### 2. Navigate to the project directory
+
+```bash
 cd AI-Phishing-Link-Checker
-3. Install the required dependencies
+```
+
+### 3. Install the required dependencies
+
+```bash
 pip install -r requirements.txt
-4. Run the Flask application
+```
+
+### 4. Run the Flask application
+
+```bash
 python app.py
-5. Open the application
+```
+
+### 5. Open the application
 
 Open the local URL displayed by Flask in your web browser.
 
+---
 
 ## 🖥️ Application Screenshots
 
@@ -115,52 +143,61 @@ Open the local URL displayed by Flask in your web browser.
 
 ![Safe URL Detection](./Screenshots/safe-url-detection.png)
 
+---
 
-🔎 Example Workflow
+## 🔎 Example Workflow
 
-Enter a URL into the web application.
-The application extracts relevant URL characteristics.
-The trained Random Forest model analyzes the extracted features.
-The application displays the predicted classification.
-A confidence score is provided along with the result.
+1. Enter a URL into the web application.
+2. The application extracts relevant URL characteristics.
+3. The trained Random Forest model analyzes the extracted features.
+4. The application displays the predicted classification.
+5. A confidence score is provided along with the result.
 
+---
 
-🎯 Project Objectives
+## 🎯 Project Objectives
 
-Understand how Machine Learning can be applied to cybersecurity.
-Analyze URL characteristics associated with phishing websites.
-Build a practical cybersecurity-focused web application.
-Implement a Machine Learning classification workflow.
-Create a simple interface for non-technical users.
+- Understand how Machine Learning can be applied to cybersecurity.
+- Analyze URL characteristics associated with phishing websites.
+- Build a practical cybersecurity-focused web application.
+- Implement a Machine Learning classification workflow.
+- Create a simple interface for users to analyze URLs.
 
+---
 
-🚀 Future Improvements
+## 🚀 Future Improvements
 
 Possible future enhancements include:
 
-Browser extension for real-time URL checking
-Integration with real-time threat intelligence feeds
-REST API for external applications
-Deep Learning-based URL classification
-Improved feature engineering
-Larger and more diverse datasets
-Model performance evaluation and visualization
-URL reputation checking using external security APIs
+- Browser extension for real-time URL checking
+- Integration with real-time threat intelligence feeds
+- REST API for external applications
+- Deep Learning-based URL classification
+- Improved feature engineering
+- Larger and more diverse datasets
+- Model performance evaluation and visualization
+- URL reputation checking using external security APIs
 
-⚠️ Disclaimer
+---
 
-This project is intended for educational and research purposes.
+## ⚠️ Disclaimer
+
+This project is intended for **educational and research purposes**.
 
 The prediction generated by the application should not be considered a definitive security verdict. Users should avoid entering sensitive information on suspicious websites and use additional security tools for verification.
 
-👩‍💻 Author
+---
 
-Rohini Kumari
+## 👩‍💻 Author
+
+**Rohini Kumari**
 
 BCA Cyber Security Student
 
-GitHub: rohinikumari90
+GitHub: [rohinikumari90](https://github.com/rohinikumari90)
 
-📄 License
+---
 
-This project is licensed under the MIT License.
+## 📄 License
+
+This project is licensed under the **MIT License**.
