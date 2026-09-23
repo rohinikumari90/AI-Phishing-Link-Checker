@@ -20,6 +20,8 @@ Machine Learning Model
 Random Forest Classifier
        ↓
 Prediction + Confidence Score
+
+
 ✨ Features
 🔍 Detects potentially phishing and legitimate URLs
 🤖 Machine Learning-based URL classification
@@ -28,6 +30,8 @@ Prediction + Confidence Score
 🌐 Simple Flask-based web interface
 ⚡ Fast URL analysis
 🧩 Modular feature extraction and model-training scripts
+
+
 🛠️ Tech Stack
 Programming & Frameworks
 Python
@@ -43,13 +47,17 @@ Phishing URL Detection
 Malicious URL Analysis
 URL Feature Extraction
 Web Security
+
+
 📂 Project Structure
 AI-Phishing-Link-Checker/
 │
 ├── Screenshots/
+│   ├── application-running.png
+│   ├── phishing-detection.png
+│   └── safe-url-detection.png
 │
 ├── static/
-│
 ├── templates/
 │
 ├── app.py
@@ -68,6 +76,7 @@ AI-Phishing-Link-Checker/
 ├── .gitattributes
 ├── LICENSE
 └── README.md
+
 ⚙️ Installation & Setup
 1. Clone the repository
 git clone https://github.com/rohinikumari90/AI-Phishing-Link-Checker.git
@@ -80,6 +89,7 @@ python app.py
 5. Open the application
 
 Open the local URL displayed by Flask in your web browser.
+
 
 ## 🖥️ Application Screenshots
 
@@ -95,18 +105,23 @@ Open the local URL displayed by Flask in your web browser.
 
 ![Safe URL Detection](./Screenshots/safe-url-detection.png)
 
+
 🔎 Example Workflow
 Enter a URL into the web application.
 The application extracts relevant URL characteristics.
 The trained Random Forest model analyzes the extracted features.
 The application displays the predicted classification.
 A confidence score is provided along with the result.
+
+
 🎯 Project Objectives
 Understand how Machine Learning can be applied to cybersecurity.
 Analyze URL characteristics associated with phishing websites.
 Build a practical cybersecurity-focused web application.
 Implement a Machine Learning classification workflow.
 Create a simple interface for non-technical users.
+
+
 🚀 Future Improvements
 
 Possible future enhancements include:
@@ -119,6 +134,7 @@ Improved feature engineering
 Larger and more diverse datasets
 Model performance evaluation and visualization
 URL reputation checking using external security APIs
+
 ⚠️ Disclaimer
 
 This project is intended for educational and research purposes.
